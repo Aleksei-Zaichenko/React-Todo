@@ -23,6 +23,11 @@ class TodoForm extends React.Component{
         });
     };
 
+    handleClearCompleted = e => {
+        e.preventDefault();
+        this.props.clearCompleted();
+    };
+
     render(){
         return (
             <div>
@@ -34,7 +39,7 @@ class TodoForm extends React.Component{
                         onChange ={this.handleChanges}
                     />
                     <button onClick ={this.handleSubmit}>Add Todo</button>
-                    <button onClick ={this.props.clearCompleted}>Clear Completed</button>
+                    <button onClick ={this. handleClearCompleted}>Clear Completed</button>
                 </form>
             </div>
         );

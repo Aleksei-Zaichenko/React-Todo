@@ -42,7 +42,7 @@ class App extends React.Component {
     })
   }
 
-  clearCompeted =() =>{
+  clearCompeted = () =>{
     this.setState({
       todo:this.state.todo.filter(taskTodo => taskTodo.completed === false)
     })
